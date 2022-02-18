@@ -67,7 +67,7 @@ class AppsHeaderHorizontalController: HorizontalSnappingController, UICollection
         let app = self.rankinglists[indexPath.item]
         cell.companyLabel.text = app.title
         cell.titleLabel.text = app.subTitle
-        cell.imageView.sd_setImage(with: URL(string: app.cover))
+        cell.imageView.kf.setImage(with: URL(string: app.cover))
         return cell
     }
     

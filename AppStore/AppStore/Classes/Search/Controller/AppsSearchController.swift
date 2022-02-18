@@ -7,7 +7,7 @@
 
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 

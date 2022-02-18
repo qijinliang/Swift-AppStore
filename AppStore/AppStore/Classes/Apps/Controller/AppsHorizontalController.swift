@@ -38,7 +38,7 @@ class AppsHorizontalController: HorizontalSnappingController, UICollectionViewDe
         let app = appGroup?.feed.results[indexPath.item]
         cell.nameLabel.text = app?.name
         cell.companyLabel.text = app?.artistName
-        cell.imageView.sd_setImage(with: URL(string: app?.artworkUrl100 ?? ""))
+        cell.imageView.kf.setImage(with: URL(string: app?.artworkUrl100 ?? ""))
         return cell
     }
     
