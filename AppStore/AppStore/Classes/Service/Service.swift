@@ -33,7 +33,7 @@ class Service {
     }
     
     //MARK -- 测试网络数据并返回结果
-    func fetchTest(urlString: String, completion: @escaping (TestModel?, Error?) -> Void) {
+    func fetchTest(urlString: String, completion: @escaping (HeadModel?, Error?) -> Void) {
         fetchGenericJSONData(urlString: urlString, completion: completion)
     }
 

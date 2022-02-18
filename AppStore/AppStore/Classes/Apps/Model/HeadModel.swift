@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct TestModel: Decodable {
+struct HeadModel: Decodable {
     var code: Int
-    var data: Json3Data_Code
+    var data: HeadData_Code
 }
 
-struct Json3Data_Code: Decodable {
+struct HeadData_Code: Decodable {
     var stateCode: Int
     var message: String
-    var returnData: Json3ReturnData
+    var returnData: HeadReturnData
 }
 
-struct Json3ReturnData: Decodable {
-    var rankinglist: [Json3Rankinglist]
+struct HeadReturnData: Decodable {
+    var rankinglist: [Headlist]
 }
 
-struct Json3Rankinglist: Decodable {
+struct Headlist: Decodable {
     var title: String
     var subTitle: String
     var cover: String

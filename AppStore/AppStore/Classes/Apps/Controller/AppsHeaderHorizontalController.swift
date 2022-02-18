@@ -9,7 +9,7 @@ import UIKit
 class AppsHeaderHorizontalController: HorizontalSnappingController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
-    var rankinglists = [Json3Rankinglist]()
+    var rankinglists = [Headlist]()
     
     
     override func viewDidLoad() {
@@ -36,12 +36,11 @@ class AppsHeaderHorizontalController: HorizontalSnappingController, UICollection
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
                 do {
-                    let jsonDecode = try JSONDecoder().decode(TestModel.self, from: data)
+                    let jsonDecode = try JSONDecoder().decode(HeadModel.self, from: data)
                     let returnDataJson = jsonDecode.data.returnData
                     DispatchQueue.main.async {
                         self.rankinglists = returnDataJson.rankinglist
                     }
-                    print("jsonDecode----->\(String(describing: returnDataJson))")
                     return
                 } catch let jsonError as NSError {
                     print("jsonError faild",jsonError.localizedDescription)
