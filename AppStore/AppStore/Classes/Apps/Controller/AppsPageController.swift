@@ -38,6 +38,7 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     
     var socialApps = [SocialApp]()
     var groups = [AppGroup]()
+    var test = [TestModel]()
     
     fileprivate func fetchData() {
         
@@ -63,6 +64,11 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         Service.shared.fetchAppGroup(urlString: "https://rss.applemarketingtools.com/api/v2/cn/music/most-played/10/albums.json") { (appGroup, err) in
             dispatchGroup.leave()
             group3 = appGroup
+        }
+        
+        //MARK -- 测试网络数据并返回结果
+        Service.shared.fetchTest(urlString: "https://rss.applemarketingtools.com/api/v2/cn/music/most-played/10/albums.json") { (testData, err) in
+            print("test--->appGroup",testData ?? [])
         }
         
         dispatchGroup.enter()
