@@ -19,14 +19,14 @@ class AppsHeaderHorizontalController: HorizontalSnappingController, UICollection
         collectionView.register(AppsHeaderCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
         
-        fetchTest()
+        NewHeadRequest()
 
     }
     
     
     
     //MARK -- 测试网络数据并返回结果
-    fileprivate func fetchTest() {
+    fileprivate func NewHeadRequest() {
 
         guard let url = URL(string: "http://app.u17.com/v3/appV3_3/ios/phone/rank/list") else {
             return
