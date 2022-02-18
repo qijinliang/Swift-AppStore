@@ -67,7 +67,7 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         }
         
         //MARK -- 测试网络数据并返回结果
-        Service.shared.fetchTest(urlString: "https://rss.applemarketingtools.com/api/v2/cn/music/most-played/10/albums.json") { (testData, err) in
+        Service.shared.fetchTest(urlString: "http://app.u17.com/v3/appV3_3/ios/phone/rank/list") { (testData, err) in
             print("test--->appGroup",testData ?? [])
         }
         

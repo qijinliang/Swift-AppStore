@@ -8,14 +8,25 @@
 import Foundation
 
 struct TestModel: Decodable {
-    let feed: testFeed
+    var code: Int
+    var data: Json3Data_Code
 }
 
-struct testFeed: Decodable {
-    let title: String
-    let results: [testFeedResult]
+struct Json3Data_Code: Decodable {
+    var stateCode: Int
+    var message: String
+    var returnData: Json3ReturnData
 }
 
-struct testFeedResult: Decodable {
-    let id, name, artistName, artworkUrl100: String
+struct Json3ReturnData: Decodable {
+    var rankinglist: [Json3Rankinglist]
+}
+
+struct Json3Rankinglist: Decodable {
+    var title: String
+    var subTitle: String
+    var cover: String
+    var argName: String
+    var argValue: String
+    var rankingType: String
 }
