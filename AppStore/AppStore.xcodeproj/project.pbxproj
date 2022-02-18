@@ -22,7 +22,6 @@
 		045B973227BF2BBC00F3B606 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B972E27BF2BBC00F3B606 /* VerticalStackView.swift */; };
 		045B973327BF2BBC00F3B606 /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B972F27BF2BBC00F3B606 /* BetterSnappingLayout.swift */; };
 		045B973627BF2BDE00F3B606 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B973527BF2BDE00F3B606 /* Service.swift */; };
-		045B973B27BF2BED00F3B606 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B973827BF2BED00F3B606 /* SocialApp.swift */; };
 		045B973C27BF2BED00F3B606 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B973927BF2BED00F3B606 /* SearchResult.swift */; };
 		045B973D27BF2BED00F3B606 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B973A27BF2BED00F3B606 /* AppGroup.swift */; };
 		045B974127BF2C2C00F3B606 /* AppsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B974027BF2C2C00F3B606 /* AppsSearchController.swift */; };
@@ -79,7 +78,6 @@
 		045B972E27BF2BBC00F3B606 /* VerticalStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		045B972F27BF2BBC00F3B606 /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
 		045B973527BF2BDE00F3B606 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		045B973827BF2BED00F3B606 /* SocialApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		045B973927BF2BED00F3B606 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		045B973A27BF2BED00F3B606 /* AppGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		045B974027BF2C2C00F3B606 /* AppsSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsSearchController.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 		045B973727BF2BED00F3B606 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				045B973827BF2BED00F3B606 /* SocialApp.swift */,
 				045B973927BF2BED00F3B606 /* SearchResult.swift */,
 				045B973A27BF2BED00F3B606 /* AppGroup.swift */,
 				045B975E27BF5A5100F3B606 /* TestModel.swift */,
@@ -491,7 +488,6 @@
 				045B975F27BF5A5100F3B606 /* TestModel.swift in Sources */,
 				045B973027BF2BBC00F3B606 /* Extensions.swift in Sources */,
 				045B973327BF2BBC00F3B606 /* BetterSnappingLayout.swift in Sources */,
-				045B973B27BF2BED00F3B606 /* SocialApp.swift in Sources */,
 				045B972A27BF2B7B00F3B606 /* BaseTabBarController.swift in Sources */,
 				045B973127BF2BBC00F3B606 /* UIView+Layout.swift in Sources */,
 				045B96FC27BF2B0400F3B606 /* ViewController.swift in Sources */,

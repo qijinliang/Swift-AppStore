@@ -36,11 +36,7 @@ class Service {
     func fetchTest(urlString: String, completion: @escaping (TestModel?, Error?) -> Void) {
         fetchGenericJSONData(urlString: urlString, completion: completion)
     }
-    
-    func fetchSocialApps(completion: @escaping ([SocialApp]?, Error?) -> Void) {
-        let urlString = "https://api.letsbuildthatapp.com/appstore/social"
-        fetchGenericJSONData(urlString: urlString, completion: completion)
-    }
+
     
     func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (T?, Error?) -> ()) {
         

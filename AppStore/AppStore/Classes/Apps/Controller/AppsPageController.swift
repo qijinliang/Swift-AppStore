@@ -35,10 +35,8 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         fetchData()
     }
     
-    
-    var socialApps = [SocialApp]()
+
     var groups = [AppGroup]()
-    var test = [TestModel]()
     
     fileprivate func fetchData() {
         
@@ -66,17 +64,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
             group3 = appGroup
         }
         
-        //MARK -- 测试网络数据并返回结果
-        Service.shared.fetchTest(urlString: "http://app.u17.com/v3/appV3_3/ios/phone/rank/list") { (testData, err) in
-            print("test--->appGroup",testData ?? [])
-        }
-        
-        dispatchGroup.enter()
-        Service.shared.fetchSocialApps { (apps, err) in
-            dispatchGroup.leave()
-            self.socialApps = apps ?? []
-        }
-        
         dispatchGroup.notify(queue: .main) {
             self.activityIndicatorView.stopAnimating()
             
@@ -95,7 +82,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AppsPageHeader
-        header.appHeaderHorizontalController.socialApps = self.socialApps
         header.appHeaderHorizontalController.collectionView.reloadData()
         return header
     }
