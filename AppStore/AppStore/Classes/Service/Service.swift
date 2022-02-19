@@ -20,12 +20,13 @@ class Service {
     }
     
     func fetchTopGrossing(completion: @escaping (AppGroup?, Error?) -> ()) {
-        let urlString = "https://rss.applemarketingtools.com/api/v2/cn/apps/top-free/50/apps.json"
+        let urlString = "https://rss.applemarketingtools.com/api/v2/cn/apps/top-paid/50/apps.json"
         fetchAppGroup(urlString: urlString, completion: completion)
     }
     
+    
     func fetchGames(completion: @escaping (AppGroup?, Error?) -> ()) {
-        fetchAppGroup(urlString: "https://rss.applemarketingtools.com/api/v2/cn/apps/top-paid/50/apps.json", completion: completion)
+        fetchAppGroup(urlString: "https://rss.applemarketingtools.com/api/v2/cn/apps/top-free/50/apps.json", completion: completion)
     }
     
     func fetchAppGroup(urlString: String, completion: @escaping (AppGroup?, Error?) -> Void) {

@@ -1,5 +1,5 @@
 //
-//  AppDetailCell.swift
+//  AppDetailswift
 //  AppStore
 //
 //  Created by qijinliang on 2022/2/18.
@@ -7,6 +7,16 @@
 import UIKit
 
 class AppDetailCell: UICollectionViewCell {
+    
+    var app: Result! {
+        
+        didSet {
+            nameLabel.text = app?.trackName
+            releaseNotesLabel.text = app?.releaseNotes
+            appIconImageView.kf.setImage(with: URL(string: app?.artworkUrl100 ?? ""))
+            priceButton.setTitle(app?.formattedPrice, for: .normal)
+        }
+    }
     
     let appIconImageView = UIImageView(cornerRadius: 16)
     
