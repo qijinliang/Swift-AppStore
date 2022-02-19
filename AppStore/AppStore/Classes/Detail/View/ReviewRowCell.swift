@@ -9,8 +9,13 @@ import UIKit
 
 class ReviewRowCell: UICollectionViewCell {
     
+    let reviewsController = ReviewController()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        addSubview(reviewsController.view)
+        reviewsController.view.fillSuperview()
     }
     
     required init?(coder: NSCoder) {

@@ -43,6 +43,9 @@
 		5B9896D527BFDA4C001523BC /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9896D427BFDA4C001523BC /* PreviewCell.swift */; };
 		5B9896D727BFDF35001523BC /* PreviewScreenshotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9896D627BFDF35001523BC /* PreviewScreenshotController.swift */; };
 		5B9896D927BFE019001523BC /* ScreenshotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9896D827BFE019001523BC /* ScreenshotCell.swift */; };
+		5B9896DB27C0861A001523BC /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9896DA27C0861A001523BC /* ReviewController.swift */; };
+		5B9896DD27C0887C001523BC /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9896DC27C0887C001523BC /* ReviewCell.swift */; };
+		5B9896E027C08B9B001523BC /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9896DF27C08B9B001523BC /* Reviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,9 @@
 		5B9896D427BFDA4C001523BC /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
 		5B9896D627BFDF35001523BC /* PreviewScreenshotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewScreenshotController.swift; sourceTree = "<group>"; };
 		5B9896D827BFE019001523BC /* ScreenshotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCell.swift; sourceTree = "<group>"; };
+		5B9896DA27C0861A001523BC /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
+		5B9896DC27C0887C001523BC /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		5B9896DF27C08B9B001523BC /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +321,7 @@
 		5B9896CF27BFD95D001523BC /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				5B9896DE27C08B87001523BC /* Model */,
 				5B9896D127BFD96C001523BC /* View */,
 				5B9896D027BFD965001523BC /* Controller */,
 			);
@@ -326,6 +333,7 @@
 			children = (
 				045B974427BF2C5300F3B606 /* AppDetailController.swift */,
 				5B9896D627BFDF35001523BC /* PreviewScreenshotController.swift */,
+				5B9896DA27C0861A001523BC /* ReviewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -336,8 +344,17 @@
 				5B9896D227BFD987001523BC /* ReviewRowCell.swift */,
 				5B9896D427BFDA4C001523BC /* PreviewCell.swift */,
 				5B9896D827BFE019001523BC /* ScreenshotCell.swift */,
+				5B9896DC27C0887C001523BC /* ReviewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5B9896DE27C08B87001523BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B9896DF27C08B9B001523BC /* Reviews.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		74586BF1A94F63624BC78CA2 /* Pods */ = {
@@ -537,6 +554,8 @@
 				045B973127BF2BBC00F3B606 /* UIView+Layout.swift in Sources */,
 				045B96FC27BF2B0400F3B606 /* ViewController.swift in Sources */,
 				045B974E27BF2DD900F3B606 /* AppDetailCell.swift in Sources */,
+				5B9896E027C08B9B001523BC /* Reviews.swift in Sources */,
+				5B9896DB27C0861A001523BC /* ReviewController.swift in Sources */,
 				045B974A27BF2C5A00F3B606 /* AppsHeaderHorizontalController.swift in Sources */,
 				045B975627BF2DE200F3B606 /* AppRowCell.swift in Sources */,
 				5B9896D527BFDA4C001523BC /* PreviewCell.swift in Sources */,
@@ -545,6 +564,7 @@
 				045B974B27BF2C5A00F3B606 /* AppsHorizontalController.swift in Sources */,
 				045B973627BF2BDE00F3B606 /* Service.swift in Sources */,
 				045B975327BF2DE200F3B606 /* AppsHeaderCell.swift in Sources */,
+				5B9896DD27C0887C001523BC /* ReviewCell.swift in Sources */,
 				045B96F827BF2B0400F3B606 /* AppDelegate.swift in Sources */,
 				045B96FA27BF2B0400F3B606 /* SceneDelegate.swift in Sources */,
 				045B975927BF2E7000F3B606 /* HorizontalSnappingController.swift in Sources */,
