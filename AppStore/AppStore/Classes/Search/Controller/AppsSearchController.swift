@@ -23,6 +23,7 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
         return label
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,6 +82,8 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
         }
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return .init(width: view.frame.width, height: 350)
     }
@@ -96,4 +99,12 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("------")
+        let appId = String(appResults[indexPath.item].trackId)
+        let appDetailController = AppDetailController(appId: appId)
+        self.navigationController?.pushViewController(appDetailController, animated: true)
+        
+
+    }
 }
