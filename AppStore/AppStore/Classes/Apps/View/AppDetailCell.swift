@@ -24,7 +24,7 @@ class AppDetailCell: UICollectionViewCell {
     
     let priceButton = UIButton(title: "$4.99")
     
-    let whatsNewLabel = UILabel(text: "What's New", font: .boldSystemFont(ofSize: 20))
+    let whatsNewLabel = UILabel(text: "更新内容", font: .boldSystemFont(ofSize: 20))
     
     let releaseNotesLabel = UILabel(text: "Release Notes", font: .systemFont(ofSize: 16), numberOfLines: 0)
     

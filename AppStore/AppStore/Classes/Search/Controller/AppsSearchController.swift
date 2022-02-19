@@ -17,7 +17,7 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
     
     fileprivate let enterSearchTermLabel: UILabel = {
         let label = UILabel()
-        label.text = "Please enter search term above..."
+        label.text = "请输入搜索内容。。。。"
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
@@ -98,13 +98,5 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
         cell.appResult = appResults[indexPath.item]
         return cell
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("------")
-        let appId = String(appResults[indexPath.item].trackId)
-        let appDetailController = AppDetailController(appId: appId)
-        self.navigationController?.pushViewController(appDetailController, animated: true)
-        
 
-    }
 }

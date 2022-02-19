@@ -23,9 +23,7 @@ class AppsHeaderHorizontalController: HorizontalSnappingController, UICollection
 
     }
     
-    
-    
-    //MARK -- 测试网络数据并返回结果
+
     fileprivate func NewHeadRequest() {
 
         guard let url = URL(string: "http://app.u17.com/v3/appV3_3/ios/phone/rank/list") else {
@@ -36,8 +34,8 @@ class AppsHeaderHorizontalController: HorizontalSnappingController, UICollection
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
                 do {
-                    let jsonDecode = try JSONDecoder().decode(HeadModel.self, from: data)
-                    let returnDataJson = jsonDecode.data.returnData
+                    let jsonHead = try JSONDecoder().decode(HeadModel.self, from: data)
+                    let returnDataJson = jsonHead.data.returnData
                     DispatchQueue.main.async {
                         self.rankinglists = returnDataJson.rankinglist
                     }

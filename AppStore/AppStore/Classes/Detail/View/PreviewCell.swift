@@ -11,7 +11,7 @@ class PreviewCell: UICollectionViewCell {
     
     let horizontalController = PreviewScreenshotController()
     
-    let previewLabel = UILabel(text: "Preview", font: .boldSystemFont(ofSize: 20))
+    let previewLabel = UILabel(text: "图片预览", font: .boldSystemFont(ofSize: 20))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
