@@ -23,16 +23,22 @@ class MusicController: BaseListController,UICollectionViewDelegateFlowLayout {
    
     var searchTerm = "taylor"
     
+    var results = [FeedResult]()
+    
     fileprivate func fetchData() {
         
-        let urlString = "https://itunes.apple.com/search?term=taylor&offset=0&limit=20"
+        let urlString = "https://rss.applemarketingtools.com/api/v2/cn/music/most-played/20/albums.json"
         print(urlString)
-        Service.shared.fetchGenericJSONData(urlString: urlString) { (searchResult: SearchResult? ,err) in
+        Service.shared.fetchGenericJSONData(urlString: urlString) { (searchResult: AppGroup? ,err) in
             if let err = err {
                 print("",err)
                 return
             }
-            print(searchResult?.results ?? [])
+            
+            self.results = searchResult?.feed.results ?? []
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
     
@@ -46,11 +52,14 @@ class MusicController: BaseListController,UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return results.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TrackCell
+        let track = results[indexPath.item]
+        cell.nameLabel.text = track.artistName
+        cell.imageView.kf.setImage(with: URL(string: track.artworkUrl100))
         return cell
     }
     
