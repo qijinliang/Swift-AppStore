@@ -65,7 +65,6 @@ class MusicController: BaseListController,UICollectionViewDelegateFlowLayout {
         
         if indexPath.item == results.count - 1 && !isPaginating {
             let urlString = "https://rss.applemarketingtools.com/api/v2/cn/music/most-played/\(results.count)/albums.json"
-            print(urlString)
             Service.shared.fetchGenericJSONData(urlString: urlString) { (searchResult: AppGroup? ,err) in
                 if let err = err {
                     print("",err)

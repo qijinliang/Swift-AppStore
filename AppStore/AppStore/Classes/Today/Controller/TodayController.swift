@@ -13,7 +13,7 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     let items = [
         TodayItem.init(category: "英雄联盟", title: "华贵铂金", image: #imageLiteral(resourceName: "TayIcon"), description: "华贵铂金，网络游戏英雄联盟中的段位，高于荣耀黄金，低于璀璨钻石。", backgroundColor: .white),
-        TodayItem.init(category: "英雄联盟", title: "华贵铂金", image: #imageLiteral(resourceName: "TayIcon"), description: "华贵铂金，网络游戏英雄联盟中的段位，高于荣耀黄金，低于璀璨钻石。", backgroundColor: #colorLiteral(red: 0.9838578105, green: 0.9588007331, blue: 0.7274674177, alpha: 1))
+        TodayItem.init(category: "王者荣耀", title: "腾讯游戏", image: #imageLiteral(resourceName: "TodayImage"), description: "王者荣耀：5v5团队公平竞技游戏\n【游戏介绍】\n《王者荣耀》是腾讯第一5V5团队公平竞技手游，国民MOBA手游大作！5V5王者峡谷、公平对战，还原MOBA经典体验；契约之战、五军对决、边境突围、王者模拟战等，带来花式作战乐趣!", backgroundColor: #colorLiteral(red: 0.9838578105, green: 0.9588007331, blue: 0.7274674177, alpha: 1))
     ]
     
     override func viewDidLoad() {
@@ -69,8 +69,7 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
             self.heightConstraint?.constant = self.view.frame.height
             
             self.view.layoutIfNeeded()
-
-            self.tabBarController?.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+            self.tabBarController?.tabBar.isHidden = true
 
         }, completion: nil)
     }
@@ -89,8 +88,7 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
             self.heightConstraint?.constant = startingFrame.height
             
             self.view.layoutIfNeeded()
-            
-            self.tabBarController?.tabBar.transform = .identity
+            self.tabBarController?.tabBar.isHidden = false
             
         }, completion: { _ in
             self.appFullscreenController.view.removeFromSuperview()
