@@ -20,15 +20,12 @@ class MusicController: BaseListController,UICollectionViewDelegateFlowLayout {
         fetchData()
     }
     
-   
-    var searchTerm = "taylor"
     
     var results = [FeedResult]()
     
     fileprivate func fetchData() {
         
-        let urlString = "https://rss.applemarketingtools.com/api/v2/cn/music/most-played/20/albums.json"
-        print(urlString)
+        let urlString = "https://rss.applemarketingtools.com/api/v2/cn/music/most-played/10/albums.json"
         Service.shared.fetchGenericJSONData(urlString: urlString) { (searchResult: AppGroup? ,err) in
             if let err = err {
                 print("",err)
@@ -55,15 +52,43 @@ class MusicController: BaseListController,UICollectionViewDelegateFlowLayout {
         return results.count
     }
 
+    
+    var isPaginating = false
+    var isDonePaginating = false
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! TrackCell
         let track = results[indexPath.item]
         cell.nameLabel.text = track.artistName
+        cell.subtitleLabel.text = track.name
         cell.imageView.kf.setImage(with: URL(string: track.artworkUrl100))
+        
+        if indexPath.item == results.count - 1 && !isPaginating {
+            let urlString = "https://rss.applemarketingtools.com/api/v2/cn/music/most-played/\(results.count)/albums.json"
+            print(urlString)
+            Service.shared.fetchGenericJSONData(urlString: urlString) { (searchResult: AppGroup? ,err) in
+                if let err = err {
+                    print("",err)
+                    return
+                }
+                
+                if searchResult?.feed.results.count == 0 {
+                    self.isDonePaginating = true
+                }
+                
+                sleep(2)
+                self.results += searchResult?.feed.results ?? []
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                self.isPaginating = false
+            }
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height: CGFloat = isDonePaginating ? 0 : 100
         return .init(width: view.frame.width, height: 100)
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppFullscreenDesriptionCell: UITableViewCell {
+class AppFullscreenDescriptionCell: UITableViewCell {
 
     let descriptionLabel: UILabel = {
         let label = UILabel()
