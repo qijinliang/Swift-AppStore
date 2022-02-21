@@ -42,7 +42,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         
         var group1: AppGroup?
         var group2: AppGroup?
-        var group3: AppGroup?
         
         let dispatchGroup = DispatchGroup()
         
@@ -58,11 +57,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
             group2 = appGroup
         }
         
-        dispatchGroup.enter()
-        Service.shared.fetchAppGroup(urlString: "https://rss.applemarketingtools.com/api/v2/cn/music/most-played/10/albums.json") { (appGroup, err) in
-            dispatchGroup.leave()
-            group3 = appGroup
-        }
         
         dispatchGroup.notify(queue: .main) {
             self.activityIndicatorView.stopAnimating()
@@ -71,9 +65,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
                 self.groups.append(group)
             }
             if let group = group2 {
-                self.groups.append(group)
-            }
-            if let group = group3 {
                 self.groups.append(group)
             }
             self.collectionView.reloadData()

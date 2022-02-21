@@ -38,6 +38,7 @@ class AppsHeaderHorizontalController: HorizontalSnappingController, UICollection
                     let returnDataJson = jsonHead.data.returnData
                     DispatchQueue.main.async {
                         self.rankinglists = returnDataJson.rankinglist
+                        self.collectionView.reloadData()
                     }
                     return
                 } catch let jsonError as NSError {
