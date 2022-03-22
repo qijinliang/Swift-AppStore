@@ -22,10 +22,11 @@ for badass in badasses {
 
 let badassesDictionary = [
     "Jon Snow": 1,
-    "Aray Stark": 1,
-    "Sansa Strak": 1,
-    "Brienne of Tarth": 1,
-    "Daenerys Targaryen": 1,
+    "Aray Stark": 2,
+    "Sansa Strak": 3,
+    "Brienne of Tarth": 4,
+    "Daenerys Targaryen": 5,
+    "ABC":6,
 ]
 //这里只需要一步到位
 let doesExist = badassesDictionary[characterToSearchFor]

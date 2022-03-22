@@ -12,8 +12,8 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
     fileprivate let cellId = "cellId"
     
     let items = [
-        TodayItem.init(category: "英雄联盟", title: "华贵铂金", image: #imageLiteral(resourceName: "TayIcon"), description: "华贵铂金，网络游戏英雄联盟中的段位，高于荣耀黄金，低于璀璨钻石。", backgroundColor: .white),
-        TodayItem.init(category: "王者荣耀", title: "腾讯游戏", image: #imageLiteral(resourceName: "TodayImage"), description: "王者荣耀：5v5团队公平竞技游戏\n【游戏介绍】\n《王者荣耀》是腾讯第一5V5团队公平竞技手游，国民MOBA手游大作！5V5王者峡谷、公平对战，还原MOBA经典体验；契约之战、五军对决、边境突围、王者模拟战等，带来花式作战乐趣!", backgroundColor: #colorLiteral(red: 0.9838578105, green: 0.9588007331, blue: 0.7274674177, alpha: 1))
+        TodayItem.init(category: "英雄联盟", title: "华贵铂金", image: #imageLiteral(resourceName: "TayIcon"), description: "华贵铂金，网络游戏英雄联盟中的段位，高于荣耀黄金，低于璀璨钻石。", backgroundColor: #colorLiteral(red: 0.948936522, green: 0.9490727782, blue: 0.9489068389, alpha: 1), cellType: .single, apps: []),
+        TodayItem.init(category: "王者荣耀", title: "腾讯游戏", image: #imageLiteral(resourceName: "TodayImage"), description: "王者荣耀：5v5团队公平竞技游戏\n【游戏介绍】\n《王者荣耀》是腾讯第一5V5团队公平竞技手游，国民MOBA手游大作！5V5王者峡谷、公平对战，还原MOBA经典体验；契约之战、五军对决、边境突围、王者模拟战等，带来花式作战乐趣!", backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), cellType: .single, apps: [])
     ]
     
     override func viewDidLoad() {
@@ -106,8 +106,11 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
         return cell
     }
     
+    
+    static let cellSize: CGFloat = 500
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width - 64, height: 450)
+        return .init(width: view.frame.width - 64, height: TodayController.cellSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
