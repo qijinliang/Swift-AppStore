@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.5.0)
+  - KakaJSON (1.1.2)
 
 DEPENDENCIES:
   - Alamofire
+  - KakaJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - KakaJSON
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
 
-PODFILE CHECKSUM: efd8ad2a3841ef49f10f63c11fc16c6dbbdb9982
+PODFILE CHECKSUM: 3b40d951411da1ff294e57ddd6f32be0b58b6309
 
 COCOAPODS: 1.11.2
