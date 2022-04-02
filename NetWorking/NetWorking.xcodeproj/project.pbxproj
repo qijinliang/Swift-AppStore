@@ -14,6 +14,7 @@
 		5BF3C7D727F8A95B00A31957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3C7D527F8A95B00A31957 /* Main.storyboard */; };
 		5BF3C7D927F8A95C00A31957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3C7D827F8A95C00A31957 /* Assets.xcassets */; };
 		5BF3C7DC27F8A95C00A31957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF3C7DA27F8A95C00A31957 /* LaunchScreen.storyboard */; };
+		5BF3C7FE27F8AF9100A31957 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF3C7FD27F8AF9100A31957 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5BF3C7D827F8A95C00A31957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BF3C7DB27F8A95C00A31957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF3C7DD27F8A95C00A31957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF3C7FD27F8AF9100A31957 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		67FE42A9630E4BBFB7FB7187 /* Pods-NetWorking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetWorking.release.xcconfig"; path = "Target Support Files/Pods-NetWorking/Pods-NetWorking.release.xcconfig"; sourceTree = "<group>"; };
 		F9D7558A3F3E3A84B24C4FB6 /* Pods-NetWorking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetWorking.debug.xcconfig"; path = "Target Support Files/Pods-NetWorking/Pods-NetWorking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				5BF3C7D827F8A95C00A31957 /* Assets.xcassets */,
 				5BF3C7DA27F8A95C00A31957 /* LaunchScreen.storyboard */,
 				5BF3C7DD27F8A95C00A31957 /* Info.plist */,
+				5BF3C7FD27F8AF9100A31957 /* API.swift */,
 			);
 			path = NetWorking;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				5BF3C7D427F8A95B00A31957 /* ViewController.swift in Sources */,
 				5BF3C7D027F8A95B00A31957 /* AppDelegate.swift in Sources */,
+				5BF3C7FE27F8AF9100A31957 /* API.swift in Sources */,
 				5BF3C7D227F8A95B00A31957 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

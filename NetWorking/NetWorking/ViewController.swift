@@ -7,16 +7,18 @@
 
 import UIKit
 import Alamofire
+import KakaJSON
 
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         
-//    http://m2.qiushibaike.com/article/list/imgrank
         super.viewDidLoad()
         
-    
+        AF.request(API.imgrank, parameters: ["page":1,"count": 20]).responseJSON { response in
+            print(response.result)
+        }
         // Do any additional setup after loading the view.
     }
 
