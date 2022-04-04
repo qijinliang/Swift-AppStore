@@ -8,4 +8,5 @@ target 'NetWorking' do
   # Pods for NetWorking
   pod 'Alamofire'
   pod 'KakaJSON'
+  pod 'SwiftyJSON'
 end
