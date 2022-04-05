@@ -88,6 +88,6 @@ class MusicController: BaseListController,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height: CGFloat = isDonePaginating ? 0 : 100
-        return .init(width: view.frame.width, height: 100)
+        return .init(width: view.frame.width, height: height)
     }
 }

@@ -6,5 +6,8 @@ target 'AppStore' do
   use_frameworks!
 
   pod 'Kingfisher'
+  pod 'Alamofire'
+  pod 'KakaJSON'
+  pod 'SwiftyJSON'
 
 end
