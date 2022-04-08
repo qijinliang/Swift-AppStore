@@ -9,5 +9,6 @@ target 'AppStore' do
   pod 'Alamofire'
   pod 'KakaJSON'
   pod 'SwiftyJSON'
+  pod 'MJRefresh'
 
 end

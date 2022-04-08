@@ -44,6 +44,11 @@
 		0471BB0227E755CA00D641FE /* BackEnabledNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471BB0127E755CA00D641FE /* BackEnabledNavigationController.swift */; };
 		0471BB0427E755F900D641FE /* MultipleAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471BB0327E755F900D641FE /* MultipleAppCell.swift */; };
 		16D7C242ED82B72109251C82 /* Pods_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4E6473BC37F00FC9D9A0B7 /* Pods_AppStore.framework */; };
+		5B59F28027FC1FB500385E77 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59F27F27FC1FB500385E77 /* TestViewController.swift */; };
+		5B59F28527FC1FE400385E77 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59F28227FC1FE400385E77 /* Items.swift */; };
+		5B59F28627FC1FE400385E77 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59F28327FC1FE400385E77 /* Comment.swift */; };
+		5B59F28727FC1FE400385E77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59F28427FC1FE400385E77 /* User.swift */; };
+		5B59F28927FC1FFC00385E77 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59F28827FC1FFC00385E77 /* API.swift */; };
 		5B69973627C21BAF00DD10AD /* AppFullscreenHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69973527C21BAF00DD10AD /* AppFullscreenHeaderCell.swift */; };
 		5B69973927C2207C00DD10AD /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69973827C2207C00DD10AD /* File.swift */; };
 		5B9896D327BFD987001523BC /* ReviewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9896D227BFD987001523BC /* ReviewRowCell.swift */; };
@@ -123,6 +128,11 @@
 		09F7A8D62B81D2DE14AA97FE /* Pods-AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore.debug.xcconfig"; path = "Target Support Files/Pods-AppStore/Pods-AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 		1F8D142AE1198F14CE207CF5 /* Pods-AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore.release.xcconfig"; path = "Target Support Files/Pods-AppStore/Pods-AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		4B4E6473BC37F00FC9D9A0B7 /* Pods_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B59F27F27FC1FB500385E77 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		5B59F28227FC1FE400385E77 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		5B59F28327FC1FE400385E77 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		5B59F28427FC1FE400385E77 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5B59F28827FC1FFC00385E77 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5B69973527C21BAF00DD10AD /* AppFullscreenHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullscreenHeaderCell.swift; sourceTree = "<group>"; };
 		5B69973827C2207C00DD10AD /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		5B9896D227BFD987001523BC /* ReviewRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRowCell.swift; sourceTree = "<group>"; };
@@ -224,6 +234,7 @@
 		045B972727BF2B3400F3B606 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B59F27E27FC1F9500385E77 /* TestController */,
 				5B9896EC27C0C126001523BC /* Music */,
 				5B9896E127C0A780001523BC /* Today */,
 				5B9896CF27BFD95D001523BC /* Detail */,
@@ -346,6 +357,34 @@
 				4B4E6473BC37F00FC9D9A0B7 /* Pods_AppStore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B59F27E27FC1F9500385E77 /* TestController */ = {
+			isa = PBXGroup;
+			children = (
+				5B59F28A27FC1FFF00385E77 /* Controller */,
+				5B59F28827FC1FFC00385E77 /* API.swift */,
+				5B59F28127FC1FE400385E77 /* Model */,
+			);
+			path = TestController;
+			sourceTree = "<group>";
+		};
+		5B59F28127FC1FE400385E77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B59F28227FC1FE400385E77 /* Items.swift */,
+				5B59F28327FC1FE400385E77 /* Comment.swift */,
+				5B59F28427FC1FE400385E77 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B59F28A27FC1FFF00385E77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B59F27F27FC1FB500385E77 /* TestViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5B69973727C2207100DD10AD /* Model */ = {
@@ -639,6 +678,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B59F28027FC1FB500385E77 /* TestViewController.swift in Sources */,
 				045B974527BF2C5300F3B606 /* AppDetailController.swift in Sources */,
 				045B974927BF2C5A00F3B606 /* AppsPageController.swift in Sources */,
 				045B973C27BF2BED00F3B606 /* SearchResult.swift in Sources */,
@@ -662,9 +702,11 @@
 				5B9896E927C0B0DC001523BC /* AppFullscreenController.swift in Sources */,
 				5B9896DB27C0861A001523BC /* ReviewController.swift in Sources */,
 				5B9896F427C0C3FC001523BC /* MusicLoadingFooter.swift in Sources */,
+				5B59F28627FC1FE400385E77 /* Comment.swift in Sources */,
 				045B974A27BF2C5A00F3B606 /* AppsHeaderHorizontalController.swift in Sources */,
 				045B975627BF2DE200F3B606 /* AppRowCell.swift in Sources */,
 				5B9896D527BFDA4C001523BC /* PreviewCell.swift in Sources */,
+				5B59F28727FC1FE400385E77 /* User.swift in Sources */,
 				045B975527BF2DE200F3B606 /* AppsPageHeader.swift in Sources */,
 				045B973D27BF2BED00F3B606 /* AppGroup.swift in Sources */,
 				045B974B27BF2C5A00F3B606 /* AppsHorizontalController.swift in Sources */,
@@ -678,12 +720,14 @@
 				045B975927BF2E7000F3B606 /* HorizontalSnappingController.swift in Sources */,
 				5B9896D927BFE019001523BC /* ScreenshotCell.swift in Sources */,
 				045B973227BF2BBC00F3B606 /* VerticalStackView.swift in Sources */,
+				5B59F28527FC1FE400385E77 /* Items.swift in Sources */,
 				0471BB0227E755CA00D641FE /* BackEnabledNavigationController.swift in Sources */,
 				045B975A27BF2E7000F3B606 /* BaseListController.swift in Sources */,
 				5B9896F227C0C234001523BC /* TrackCell.swift in Sources */,
 				5B9896D327BFD987001523BC /* ReviewRowCell.swift in Sources */,
 				045B975427BF2DE200F3B606 /* AppsGroupCell.swift in Sources */,
 				0471BAFE27E7558100D641FE /* TodayMultipleAppCell.swift in Sources */,
+				5B59F28927FC1FFC00385E77 /* API.swift in Sources */,
 				0471BB0427E755F900D641FE /* MultipleAppCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

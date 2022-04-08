@@ -2,12 +2,14 @@ PODS:
   - Alamofire (5.5.0)
   - KakaJSON (1.1.2)
   - Kingfisher (7.1.2)
+  - MJRefresh (3.7.5)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - KakaJSON
   - Kingfisher
+  - MJRefresh
   - SwiftyJSON
 
 SPEC REPOS:
@@ -15,14 +17,16 @@ SPEC REPOS:
     - Alamofire
     - KakaJSON
     - Kingfisher
+    - MJRefresh
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 49021c9b82a7e1111b11e9acc776b11d665e57ea
+PODFILE CHECKSUM: 007ed4ce20cacdc72061468c2ab96cad224b6961
 
 COCOAPODS: 1.11.2

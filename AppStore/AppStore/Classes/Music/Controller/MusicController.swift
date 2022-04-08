@@ -7,10 +7,12 @@
 
 import UIKit
 
+
 class MusicController: BaseListController,UICollectionViewDelegateFlowLayout {
     
     fileprivate let cellId = "cellId"
     fileprivate let footerId = "footerId"
+    lazy var results = [FeedResult]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,6 @@ class MusicController: BaseListController,UICollectionViewDelegateFlowLayout {
     }
     
     
-    var results = [FeedResult]()
     
     fileprivate func fetchData() {
         
