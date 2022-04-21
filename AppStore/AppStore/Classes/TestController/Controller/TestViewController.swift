@@ -61,7 +61,6 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let jsonsArray = JSON(dict)["items"].arrayObject
             
             let modelsArray = modelArray(from: jsonsArray!, Item.self)
-            print(modelsArray)
 
             self.items.append(contentsOf: modelsArray)
     
