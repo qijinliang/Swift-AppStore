@@ -17,7 +17,7 @@ class TodayMultipleAppsController: BaseListController, UICollectionViewDelegateF
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "close_button"), for: .normal)
         button.tintColor = .darkGray
-        button.addTarget(self, action: #selector(handleDismiss), for: .touchUpInside)
+        button.addTarget(TodayMultipleAppsController.self, action: #selector(handleDismiss), for: .touchUpInside)
         return button
     }()
     
