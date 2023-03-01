@@ -7,8 +7,4 @@ target 'AppStore' do
 
   pod 'Kingfisher'
   pod 'Alamofire'
-  pod 'KakaJSON'
-  pod 'SwiftyJSON'
-  pod 'MJRefresh'
-
 end
